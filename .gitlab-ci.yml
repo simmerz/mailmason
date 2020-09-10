@@ -1,0 +1,32 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  image: node:lts-slim
+  before_script:
+    - yarn
+  script:
+    - yarn build
+  cache:
+    paths:
+      - node_modules
+  artifacts:
+    expose_as: Build
+    paths:
+      - dist
+    expire_in: 2 days
+
+deploy:
+  stage: deploy
+  image: node:lts-slim
+  before_script:
+    - cp $SECRETS ./secrets.json
+  script:
+    - yarn images:s3
+    - yarn deploy:postmark
+  only:
+    - master
+  needs:
+    - build

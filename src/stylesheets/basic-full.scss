@@ -8,19 +8,22 @@ body {
   background-color: $c-slate-40;
   color: $c-slate-500;
 }
+
 p {
   color: $c-slate-500;
 }
+
 p.sub {
   color: $c-slate-400;
 }
 
 .email-wrapper {
-  @include table-scale();
+  @include table-scale;
   background-color: $c-slate-40;
 }
+
 .email-content {
-  @include table-scale();
+  @include table-scale;
 }
 
 
@@ -33,12 +36,13 @@ p.sub {
   &_logo {
     width: 94px;
   }
+
   &_name {
+    color: $c-slate-200;
     font-size: 16px;
     font-weight: bold;
-    color: $c-slate-200;
     text-decoration: none;
-    text-shadow: 0 1px 0 rgba(255,255,255,1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
   }
 }
 
@@ -47,11 +51,11 @@ p.sub {
 
 .email-body {
   @include table-scale();
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 
   &_inner {
     @include table-scale($width: 570px, $margin: 0 auto);
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 }
 
@@ -68,11 +72,13 @@ p.sub {
   @include table-scale($margin: 30px auto);
   text-align: center;
 }
+
 .body-sub {
   margin-top: 25px;
   padding-top: 25px;
   border-top: 1px solid $c-slate-50;
 }
+
 .content-cell {
   padding: 35px;
 }
@@ -81,6 +87,7 @@ p.sub {
 /*Media Queries ------------------------------ */
 
 @media only screen and (max-width: 600px) {
+
   .email-body_inner,
   .email-footer {
     width: 100% !important;
@@ -88,6 +95,7 @@ p.sub {
 }
 
 @media (prefers-color-scheme: dark) {
+
   body,
   .email-body,
   .email-body_inner,
@@ -98,6 +106,7 @@ p.sub {
     background-color: $c-gray-900 !important;
     color: #FFF !important;
   }
+
   p,
   ul,
   ol,
@@ -112,6 +121,7 @@ p.sub {
   .discount {
     background-color: #222 !important;
   }
+
   .email-masthead_name {
     text-shadow: none !important;
   }

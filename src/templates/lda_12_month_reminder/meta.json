@@ -1,0 +1,7 @@
+{
+  "Name": "12 Month Reminder (LD Archive)",
+  "Alias": "twelve_month_reminder_lda",
+  "Subject": "Your HardSoft {{lease_type}} is now available for renewal, {{name}}!",
+  "TemplateType": "Standard",
+  "LayoutTemplate": "plain"
+}

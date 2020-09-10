@@ -5,17 +5,20 @@
 // --------------------------------
 
 body {
-  background-color: #FFF;
+  background-color: #fff;
   color: #333;
 }
+
 p {
   color: #333;
 }
+
 .email-wrapper {
-  @include table-scale();
+  @include table-scale;
 }
+
 .email-content {
-  @include table-scale();
+  @include table-scale;
 }
 
 
@@ -28,12 +31,13 @@ p {
   &_logo {
     width: 94px;
   }
+
   &_name {
+    color: $c-slate-200;
     font-size: 16px;
     font-weight: bold;
-    color: $c-slate-200;
     text-decoration: none;
-    text-shadow: 0 1px 0 rgba(255,255,255,1);
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 1);
   }
 }
 
@@ -41,7 +45,7 @@ p {
 /* Body ------------------------------ */
 
 .email-body {
-  @include table-scale();
+  @include table-scale;
 
   &_inner {
     @include table-scale($width: 570px, $margin: 0 auto);
@@ -61,11 +65,13 @@ p {
   @include table-scale($margin: 30px auto);
   text-align: center;
 }
+
 .body-sub {
+  border-top: 1px solid $c-slate-50;
   margin-top: 25px;
   padding-top: 25px;
-  border-top: 1px solid $c-slate-50;
 }
+
 .content-cell {
   padding: 35px;
 }
@@ -74,6 +80,7 @@ p {
 /*Media Queries ------------------------------ */
 
 @media only screen and (max-width: 600px) {
+
   .email-body_inner,
   .email-footer {
     width: 100% !important;
@@ -83,8 +90,9 @@ p {
 @media (prefers-color-scheme: dark) {
   body {
     background-color: $c-gray-900 !important;
-    color: #FFF !important;
+    color: #fff !important;
   }
+
   p,
   ul,
   ol,
@@ -92,13 +100,14 @@ p {
   h1,
   h2,
   h3 {
-    color: #FFF !important;
+    color: #fff !important;
   }
 
   .attributes_content,
   .discount {
     background-color: #222 !important;
   }
+
   .email-masthead_name {
     text-shadow: none !important;
   }

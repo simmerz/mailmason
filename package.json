@@ -4,7 +4,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/wildbit/mailmason"
+    "url": "https://git.initforthe.com/hardsoft/email-templates"
   },
   "scripts": {
     "start": "grunt watch",
@@ -16,7 +16,8 @@
     "litmus": "grunt litmus",
     "flood": "grunt flood",
     "build": "grunt",
-    "deploy": "grunt deploy"
+    "deploy": "grunt deploy",
+    "deploy:postmark": "grunt deploy-only"
   },
   "devDependencies": {
     "grunt": "^1.0.4",

@@ -1,10 +1,10 @@
 /* Base ------------------------------ */
 
 body {
-  width: 100% !important;
+  -webkit-text-size-adjust: none;
   height: 100%;
   margin: 0;
-  -webkit-text-size-adjust: none;
+  width: 100% !important;
 }
 
 a {
@@ -21,12 +21,12 @@ td {
 
 .preheader {
   display: none !important;
-  visibility: hidden;
-  mso-hide: all;
   font-size: 1px;
   line-height: 1px;
   max-height: 0;
   max-width: 0;
+  mso-hide: all;
   opacity: 0;
   overflow: hidden;
+  visibility: hidden;
 }

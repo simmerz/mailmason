@@ -1,0 +1,54 @@
+---
+layout: plain/content.hbs
+preheader: "Your HardSoft <%= lease_type %> is now available for renewal."
+---
+<h1>Hello \{{name}}!</h1>
+<p>I hope you and business are keeping well.</p>
+<p>This is just a quick email to let you know that your HardSoft \{{lease_type}} is now available for renewal.</p>
+<p>You can opt for a new Mac or PC and either keep your original device or we will collect it from you and provide a
+  further discounted offer - it’s similar to a mobile phone upgrade. You are not constrained to a ‘Like for Like’ device
+  but can use this renewal option for any device you need/like - especially important with the shift to home working. If
+  you do wish for the latest ‘Like for Like’ option this is also fine!</p>
+<p>Thoughts? Are you free for a quick 15min call with your Account Manager to run through your options? Or just ping me
+  over your requirements and I’ll get a quote sent over.</p>
+
+<p>For your reference, your lease agreement <strong>\{{agreement_number}}</strong> with <strong>\{{provider}}</strong>
+  includes the following kit:</p>
+
+<p>The kit associated with this agreement is as follows:</p>
+
+\{{#each products}}
+<table class="attributes" width="100%" cellpadding="0" cellspacing="0" role="presentation">
+  <tr>
+    <td class="attributes_content">
+      <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+        <tbody>
+          <tr>
+            <td class="attributes_item">
+              <span class="f-fallback">
+                <strong>\{{product_name}}</strong>
+              </span>
+            </td>
+          </tr>
+          <tr>
+            <td class="attributes_item">
+              <span class="f-fallback">
+                <strong>Serial Numbers: </strong>
+                \{{serial_numbers}}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
+<br />
+\{{/each}}
+
+<p>Have a great day and take care,</p>
+<p>\{{account_manager}}</p>
+
+<p><strong>P.S.</strong> If you do not wish to take the renewal option forward please do let us know and we will
+  instruct
+  if you need to do anything else to ensure your lease ends after \{{lease_term}} years.</p>

@@ -73,16 +73,14 @@ module.exports = function(grunt) {
         partials: `${path.partials}*.hbs`,
         flatten: true,
         sender_name: '<%= config.strings.sender_name %>',
-        product_name: '<%= config.strings.product_name %>',
-        product_url: '<%= config.strings.product_url %>',
-        credit_card_statement_name:
-          '<%= config.strings.credit_card_statement_name %>',
+        lease_type: '<%= config.strings.lease_type %>',
+        company_url: '<%= config.strings.company_url %>',
         formal_company_name: '<%= config.strings.formal_company_name %>',
         address_line_1: '<%= config.strings.address_line_1 %>',
         address_line_2: '<%= config.strings.address_line_2 %>',
         city: '<%= config.strings.city %>',
-        state: '<%= config.strings.state %>',
-        country: '<%= config.strings.country %>',
+        county: '<%= config.strings.county %>',
+        postal_code: '<%= config.strings.postal_code %>',
         phone: '<%= config.strings.phone %>',
         images_url: '<%= config.images.images_url %>',
         use_images: '<%= config.images.use_images %>',
@@ -97,6 +95,7 @@ module.exports = function(grunt) {
         google_plus_url: '<%= config.images.google_plus_url %>',
         youtube_url: '<%= config.images.youtube_url %>',
         linkedin_url: '<%= config.images.linkedin_url %>',
+        year: new Date().getFullYear(),
       },
       generic: {
         expand: true,
@@ -373,7 +372,7 @@ module.exports = function(grunt) {
       },
       postmarkPush: {
         command:
-          'postmark templates push ./dist',
+          'postmark templates push -f ./dist',
       },
     },
 
@@ -438,7 +437,8 @@ module.exports = function(grunt) {
   grunt.registerTask('css', ['sass', 'autoprefixer'])
   grunt.registerTask('images-ftp', ['ftp-deploy'])
   grunt.registerTask('images-s3', ['s3'])
-  grunt.registerTask('deploy', ['default', 'shell:postmarkPush'])
+  grunt.registerTask('deploy-only', ['shell:postmarkPush'])
+  grunt.registerTask('deploy', ['default', 'deploy-only'])
 
   // Testing
   grunt.registerTask('spam', ['spamcheck'])

@@ -4,40 +4,40 @@
   @include table-scale($padding: 35px 0);
 
   &_content {
-    @include table-scale($padding: 25px 0 0 0);
+    @include table-scale($padding: 25px 0 0);
   }
 
   // Items
   &_item {
-    padding: 10px 0;
     color: $c-slate-500;
     font-size: 15px;
     line-height: 18px;
+    padding: 10px 0;
   }
 
   // Headings
   &_heading {
-    padding-bottom: 8px;
     border-bottom: 1px solid $c-slate-50;
+    padding-bottom: 8px;
 
     p {
-      margin: 0;
       color: $c-slate-300;
       font-size: 12px;
+      margin: 0;
     }
   }
 
   // Footer
   &_footer {
-    padding-top: 15px;
     border-top: 1px solid $c-slate-50;
+    padding-top: 15px;
   }
 
   &_total {
+    color: $c-gray-900;
+    font-weight: bold;
     margin: 0;
     text-align: right;
-    font-weight: bold;
-    color: $c-gray-900;
 
     &--label {
       padding: 0 15px 0 0;
